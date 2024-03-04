@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;1,400&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Ubuntu", sans-serif;
+    
+}
+
+
+
+nav{
+    background-color: #ffffff;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    
+}
+
+
+
+label.logo{
+    color: #ff5c35;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 8px 0 45px;
+    font-weight: bold;
+}
+
+nav ul{
+    float: right;
+    margin-right: 25px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 4px;
+}
+
+nav ul li a{
+    color: #2e475d;
+    font-size: 17px;
+    padding: 7px 12px;
+    border-radius: 5px;
+}
+
+nav ul li a.active,a:hover{
+    background-color: #fef4ea;
+    transition: .5s;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: #2e475d;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+@media (max-width: 768px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px){
+    .checkbtn{
+        display: block;
+    }
+   ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #ff5c35;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        z-index: 3;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+
+    }
+
+    a:hover{
+        background: none;
+        color: #ffffff;
+    }
+
+    #check:checked ~ ul{
+        left: 0;
+    }
+   
+    .shirts {
+        flex-wrap: wrap;
+        margin: 50px auto;
+    }
+
+    .box {
+        width: calc(50% - 20px);
+        margin: 0 10px 20px;
+        
+    }
+
+    .caption p{
+        font-size: 10px;
+        text-align: center;
+    }
+   
+}
+
+
+
+
+
+.main{
+    position: relative;
+    max-width: 100%;
+}
+
+.main img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+} 
+
+
+.main-text{
+    padding: 0 15%;
+    position: absolute;
+    top: 25vw;
+    color: #fff;
+    
+}
+.main-text h2{
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-size: 5vw;
+}
+
+.main-text p{
+    font-size: 4vw;
+}
+
+
+
+
+.shirts{
+    width: 95%;
+    padding: 20px;
+    margin: 0 auto 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.box{
+    width: calc(33.33% - 20px); 
+    margin:10px;
+    box-shadow: 0 0 20px 2px rgba(0, 0, 0, .1);
+    transition: 1s;
+    position: relative;
+}
+
+.box img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.box:hover{
+   transform: scale(1.1);
+   z-index: 2;
+
+}
+
+.caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.box:hover .caption{
+    opacity: 1;
+background-color: rgba(0,0, 0, 0.5);
+}
+
+
+.info .heading{
+    width: 85%;
+    margin: auto;
+    text-align: center;
+}
+
+.info .heading h1{
+    color: #f15b43;
+    font-size: 50px;
+    margin-top: 50px;
+    font-weight: 400;
+}
+
+.wrapper{
+    width: 85%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content{
+    width: 50%;
+    margin: 0px 25px;
+    transition: 0.4s ease;
+}
+
+.content:hover{
+    transform: translateY(-10px);
+}
+
+.content p{
+    color: #666;
+    font-size: 19px;
+    line-height: 1.5;
+    margin-top: 10px;
+
+}
+
+.pic{
+    width: 50%;
+    transition: 0.4s ease;
+}
+
+.pic:hover{
+    transform: translateY(-10px);
+}
+.pic img{
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width :768px){
+    .wrapper{
+        flex-direction: column;
+        margin-top: 10px;
+    }
+    .info .heading h1{
+        font-size: 40px;
+        padding-top: 80px;
+    }
+    .content, .pic{
+        width: 100%;
+        margin-top: 30px;
+    }
+
+  
+}
+
+
+
+.collections{
+    width: 85%;
+    margin: 50px auto 50px ;
+    text-align: center;
+    color: #f15b43;
+    font-size: 50px;
+    
+    font-weight: 400;
+    
+    padding-top: 80px;
+    
+}
+
+.collection-heading{
+    width:85%;
+    margin: auto;
+    text-align: left;
+    font-size: 30px;
+    margin-bottom:0;
+    font-weight: 400;
+}
+
+@media (max-width: 768px) {
+    .collections {
+        font-size: 40px;
+        padding-top: 80px;
+    }
+    .collection-heading{
+        font-size: 25px;
+    }
+}
+
+
+footer{
+    background-color: #343434;
+    padding-top: 50px;
+}
+
+
+
+.footer-content h3{
+    width: 85%;
+    margin: auto;
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.footer-content p{
+    width: 85%;
+    margin: auto;
+    padding: 7px;
+    text-align: left;
+}
+
+
+
+.bottom-bar{
+    background: #f18930;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 50px;
+}
+
+.bottom-bar p{
+    color: #343434;
+    margin: 0;
+    font-size: 16px;
+    padding: 7px;
+}
+@media only screen and (max-width: 768px) {
+    .foot {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .footer-content {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .footer-content p {
+        width: auto;
+        margin: auto;
+        padding: 7px;
+    }
+
+    .bottom-bar p {
+        font-size: 14px;
+    }
+
+  
+}
